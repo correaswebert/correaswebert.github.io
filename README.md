@@ -1,4 +1,4 @@
 ## Welcome to my page!
 
-- [Todo List](TodoList)
-- [Analogue Clock](analogue-clock)
+- [Todo List](https://swebert.codes/TodoList)
+- [Analogue Clock](https://swebert.codes/analogue-clock)
