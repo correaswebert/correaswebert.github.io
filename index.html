@@ -9,90 +9,57 @@
     <title>sweb'site</title>
 
     <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
-      crossorigin="anonymous"
+      rel="shortcut icon"
+      href="./assets/img/favicon/favicon-16x16.png"
+      type="image/x-icon"
     />
-    <style type="text/css">
-      @font-face {
-        font-family: roman-morrissey;
-        src: url(assets/roman-morrissey.ttf) format("truetype");
-        font-display: auto;
-      }
-    </style>
+    <link rel="manifest" href="./assets/scripts/site.webmanifest" />
 
-    <link rel="stylesheet" href="./assets/main.css" />
+    <link rel="stylesheet" href="./assets/styles/main.css" />
   </head>
 
   <body>
-    <div class="wrapper">
-      <div class="wrapper-inner">
-        <div class="loader">
-          <button class="toggle-music" onclick="toggleMusic()">
-            <svg
-              id="wave"
-              data-name="Layer 1"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 50 38.05"
-            >
-              <title>Audio Wave</title>
-              <path
-                id="Line_1"
-                data-name="Line 1"
-                d="M00.91,15L0.78,15A1,1,0,0,0,0,16v6a1,1,0,1,0,2,0s0,0,0,0V16a1,1,0,0,0-1-1H0.91Z"
-              />
-              <path
-                id="Line_2"
-                data-name="Line 2"
-                d="M06.91,9L6.78,9A1,1,0,0,0,6,10V28a1,1,0,1,0,2,0s0,0,0,0V10A1,1,0,0,0,7,9H6.91Z"
-              />
-              <path
-                id="Line_3"
-                data-name="Line 3"
-                d="M12.91,0L12.78,0A1,1,0,0,0,12,1V37a1,1,0,1,0,2,0s0,0,0,0V1a1,1,0,0,0-1-1H12.91Z"
-              />
-              <path
-                id="Line_4"
-                data-name="Line 4"
-                d="M18.91,10l-0.12,0A1,1,0,0,0,18,11V27a1,1,0,1,0,2,0s0,0,0,0V11a1,1,0,0,0-1-1H18.91Z"
-              />
-              <path
-                id="Line_5"
-                data-name="Line 5"
-                d="M24.91,15l-0.12,0A1,1,0,0,0,24,16v6a1,1,0,0,0,2,0s0,0,0,0V16a1,1,0,0,0-1-1H24.91Z"
-              />
-              <path
-                id="Line_6"
-                data-name="Line 6"
-                d="M30.91,10l-0.12,0A1,1,0,0,0,30,11V27a1,1,0,1,0,2,0s0,0,0,0V11a1,1,0,0,0-1-1H30.91Z"
-              />
-              <path
-                id="Line_7"
-                data-name="Line 7"
-                d="M36.91,0L36.78,0A1,1,0,0,0,36,1V37a1,1,0,1,0,2,0s0,0,0,0V1a1,1,0,0,0-1-1H36.91Z"
-              />
-              <path
-                id="Line_8"
-                data-name="Line 8"
-                d="M42.91,9L42.78,9A1,1,0,0,0,42,10V28a1,1,0,1,0,2,0s0,0,0,0V10a1,1,0,0,0-1-1H42.91Z"
-              />
-              <path
-                id="Line_9"
-                data-name="Line 9"
-                d="M48.91,15l-0.12,0A1,1,0,0,0,48,16v6a1,1,0,1,0,2,0s0,0,0,0V16a1,1,0,0,0-1-1H48.91Z"
-              />
-            </svg>
-          </button>
-        </div>
+    <div class="background"></div>
 
-        <h1 class="name" id="name">Swebert Correa</h1>
+    <section class="flex-col" id="main-content">
+      <header>
+        <h1 class="name">Swebert <wbr /> Correa</h1>
+        <p class="about-me">Novels, music, code...</p>
+      </header>
 
-        <!-- Courtesy Eiro Nareth -->
-        <audio id="bg-music" src="assets/interstellar.mp3" loop autoplay></audio>
+      <main class="flex-row">
+        <button onclick="reveal('blog')" class="icon-button">
+          <img src="./assets/img/blog.png" alt="Blog" />
+        </button>
+        <button onclick="reveal('social')" class="icon-button">
+          <img src="./assets/img/social.png" alt="Social" />
+        </button>
+        <button onclick="reveal('code')" class="icon-button">
+          <img src="./assets/img/code.png" alt="Code" />
+        </button>
+      </main>
 
-        <aside>Under construction...</aside>
-      </div>
+      <footer>
+        <button onclick="reveal('credit')">
+          <img src="./assets/img/information.png" alt="credits" />
+        </button>
+      </footer>
+    </section>
+
+    <section class="flex-col" id="link-content" style="display: none"></section>
+
+    <div class="loader">
+      <div class="loader__icon"></div>
+
+      <div class="loader__tile"></div>
+      <div class="loader__tile"></div>
+      <div class="loader__tile"></div>
+      <div class="loader__tile"></div>
+      <div class="loader__tile"></div>
     </div>
+
+    <audio id="bg-music" src="./assets/interstellar.mp3" loop autoplay></audio>
+
+    <script src="./assets/scripts/main.js"></script>
   </body>
 </html>
