@@ -22,10 +22,6 @@ const codeLinks = [
 ];
 
 const creditLinks = [
-  {
-    title: "Music",
-    url: "https://www.youtube.com/channel/UCOR-iqlcedb8VMnax37m3MQ",
-  },
   { title: "Fonts", url: "https://www.1001fonts.com/" },
   { title: "Icons", url: "https://www.flaticon.com/" },
   { title: "Background", url: "https://www.svgbackgrounds.com/" },
