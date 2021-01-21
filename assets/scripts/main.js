@@ -29,7 +29,7 @@ const creditLinks = [
 ];
 
 function populateLinks(content) {
-  linkContent.innerHTML = `<button onclick="reveal()" class="close-button">&Cross;</button>`;
+  linkContent.innerHTML = `<button onclick="reveal('home')" class="close-button">&Cross;</button>`;
 
   switch (content) {
     case "blog":
@@ -63,9 +63,13 @@ function populateLinks(content) {
 
 function reveal(content) {
   loader.classList.add("loader--active");
-  populateLinks(content);
+
+  if (content !== "home") {
+    populateLinks(content);
+  }
 
   setTimeout(function () {
+    loader.classList.remove("loader--active");
     if (revealed) {
       mainContent.style.display = "flex";
       linkContent.style.display = "none";
@@ -73,7 +77,6 @@ function reveal(content) {
       mainContent.style.display = "none";
       linkContent.style.display = "flex";
     }
-    loader.classList.remove("loader--active");
     revealed = !revealed;
   }, 2000);
 }

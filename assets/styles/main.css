@@ -108,6 +108,7 @@ footer > button {
   height: 25px;
   outline: none;
   cursor: pointer;
+  padding-top: 2px;
 }
 
 footer > button > img {
@@ -129,6 +130,7 @@ footer > button > img {
 .link {
   font-family: "farmgarden", sans-serif;
   font-size: 3em;
+  font-weight: bold;
   text-decoration: none;
   line-height: 1em;
   margin: 1em 0;
@@ -145,18 +147,6 @@ footer > button > img {
   width: 0;
   height: 100vh;
   transition: width 0s 1.4s ease;
-}
-.loader .loader__icon {
-  position: absolute;
-  z-index: 1;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  opacity: 0;
-  transition: opacity 0.5s ease;
-}
-.loader .loader__icon svg {
-  transform-origin: 0 0;
 }
 .loader .loader__tile {
   position: absolute;
@@ -193,10 +183,6 @@ footer > button > img {
 .loader--active {
   width: 100%;
   transition-delay: 0s;
-}
-.loader--active .loader__icon {
-  opacity: 1;
-  transition: opacity 0.5s 1.4s ease;
 }
 .loader--active .loader__tile {
   width: 100%;
@@ -240,6 +226,7 @@ footer > button > img {
   footer > button {
     width: 15px;
     height: 15px;
+    padding: initial;
   }
 
   footer > button > img {
