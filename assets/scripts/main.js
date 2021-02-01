@@ -78,5 +78,5 @@ function reveal(content) {
       linkContent.style.display = "flex";
     }
     revealed = !revealed;
-  }, 2000);
+  }, 1000);
 }
