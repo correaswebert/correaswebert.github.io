@@ -1,6 +1,7 @@
 const loader = document.querySelector(".loader");
 const mainContent = document.getElementById("main-content");
 const linkContent = document.getElementById("link-content");
+const closeBtn = document.getElementById("close-button");
 let revealed = false;
 
 const blogLinks = [
@@ -29,7 +30,7 @@ const creditLinks = [
 ];
 
 function populateLinks(content) {
-  linkContent.innerHTML = `<button onclick="reveal('home')" class="close-button">&Cross;</button>`;
+  linkContent.innerHTML = "";
 
   switch (content) {
     case "blog":
@@ -72,9 +73,11 @@ function reveal(content) {
     loader.classList.remove("loader--active");
     if (revealed) {
       mainContent.style.display = "flex";
+      closeBtn.style.display = "none";
       linkContent.style.display = "none";
     } else {
       mainContent.style.display = "none";
+      closeBtn.style.display = "block";
       linkContent.style.display = "flex";
     }
     revealed = !revealed;
