@@ -84,7 +84,7 @@ header {
 }
 
 footer {
-  position: absolute;
+  position: fixed;
   bottom: 1em;
   left: 1em;
   color: white;
@@ -190,6 +190,10 @@ footer > button > img {
 }
 
 @media screen and (max-width: 576px) {
+  .flex-col {
+    transform: translateY(-10%);
+  }
+
   .name {
     font-size: 2em;
     line-height: 4em;
@@ -197,6 +201,9 @@ footer > button > img {
   }
   .about-me {
     font-size: 1.5em;
+  }
+  header {
+    margin: 2.5em;
   }
   nav {
     position: absolute;
